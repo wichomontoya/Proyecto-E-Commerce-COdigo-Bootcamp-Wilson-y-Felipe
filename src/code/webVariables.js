@@ -15,7 +15,7 @@ Inscripcion.prototype.registrar=function(usuario){
 }
 // Loggearse--------------------------------Hacer Login
 Inscripcion.prototype.login = function(email,password){
-  if(this.registros === undefined){
+  if(this.registros !== undefined){
     for (var i = this.registros.length - 1; i >= 0; i--) {
       if (this.registros[i].email === email && this.registros[i].password === password) {
         alert("Bienvenido a Mi Tiendita");
@@ -32,5 +32,6 @@ var miRegistro = new Inscripcion();
 var usuario = new Persona("felipe", "martinez", "amartinez@correo.com", "qwerty123");
 miRegistro.registrar(usuario);
 miRegistro.login("amartinez@correo.com","qwerty123");
+
 
 

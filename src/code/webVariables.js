@@ -1,3 +1,5 @@
+//$(document).ready(function(){
+
 // Datos del Usuarios------------------------------Definicion de datos para el registro 
 var Persona = function (firstName,lastName,email,password) {
   this.firstName = firstName;
@@ -33,5 +35,34 @@ var usuario = new Persona("felipe", "martinez", "amartinez@correo.com", "qwerty1
 miRegistro.registrar(usuario);
 miRegistro.login("amartinez@correo.com","qwerty123");
 
+//-------------------------------Productos
+
+//-------------------------------Definicion de las caracteristicas del Producto
+  var Producto = function(nombre,descripcion,precio){
+    this.nombre = nombre;
+    this.descripcion = descripcion;
+    this.precio = precio;
+  };
+//-------------------------------Definimos una lista de compras
+  var CarritoDeCompras = function(){
+    this.listaDeCompras = [];
+  };
+//-------------------------------Guardar los productos seleccionados en una lista de compras
+  CarritoDeCompras.prototype.agregarAlCarrito = function(producto){
+    this.listaDeCompras.push(producto);
+  };
+//-------------------------------Quitamos un producto definido de nuestra lista de compras  
+  CarritoDeCompras.prototype.quitarDelCarrito = function(nombreDelProducto){
+    if(this.listaDeCompras !== undefined){
+      for (var i = this.listaDeCompras.length-1; i >= 0; i--){
+        if(this.listaDeCompras[i].nombre === nombreDelProducto){
+          this.listaDeCompras.splice(i,1);
+        };
+      };  
+    }else{
+      alert("No hay productos en tu lista de compras");
+    };    
+  };
+//});
 
 

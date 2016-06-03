@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- '0.12'
+before_script:
+- npm install -g grunt-cli
+script: grunt jasmine --verbose
+env:
+  global:
+    secure: Ssaep46MSiwuTyGGn5bsSsy9Jp44c222wu9vpqDTUUCAuiHExF50DeL+Ynj7mEbWqpjZCKUH5NLQKsYAtCBoJc3IxIH02E+h24WFUGF7uiobtM91nuGzYHTHjTUB6l8lAphwvKBXwao3PG9gu64OX0Doy4VbwPfzWlrHlT7tpwIaqMo5Dlu1+O/LnHBzTdeXzLn/+vaEACVYz5oTOft6MZBvS1keNBRjxJpV8CPZPd4W+f7xpDzXMLZaMjlstP29oxHnnR1fVf0XB+dBuI5Y/Miso26muhPmL1L0taqxdLi0sOtBzk0/dldF8QMgn3wzvlOElCOf4SGkOl9j1FIAmdgPWFxMm1AxMllct6/xumtsj4ZpM/xNPorRA5xyF8d3ofTYCKGDOHlbiHEzP0Iumw/VE7oM5XQQKrD+UBB4FrTD2o/GEPi/RzOA5LUO+x8UIWbX6MrEYyciJ0LJBsJ2qqrW6+/9Z7twpTgQeIzrgj10h2ogDsuh4n0iiqq5uyDpqbjG0pm3NDbqbDbJwMNlnFkBCi9NRo/Zh6GNuBcRAhSxUlmC7yxLzRpfzNfalG74IaL+rjSwE/UYwh2sVrSVWuj07Je2gTHsCEqE7doJ+U2HiNqv4lanA+dPH5HNl+zGKizbWAgh7kf5Vrk80zsbHZ/hKJN5cb3ZaKMaV9j1ol4=

@@ -6,9 +6,155 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="js/code.js"></script>
 </head>
-<body>
 
+<!--------------------------------------------------------------------------Header------------------>
+<div class="jumbotron">
+	<img src="http://www.whiskdesign.com.au/wp-content/uploads/2013/02/RCracedays1.jpg" class="img-responsive" alt="" height="150px" >
+<!------------------------------------------------------------------Modal para el Registro-------->
+	<button class="btn btn-default" data-toggle="modal" data-target="#miRegistro">Registrese</button>
+	<div class="modal " id="miRegistro" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<buttom type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</buttom>	
+					<h4>Registro</h4>
+					<form>
+						<div class="modal-body">
+							<div class="form-group">
+								<input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+							</div>		
+							<div class="form-group">
+								<input type="apellido" class="form-control" id="inputApellido" placeholder="Apellido">
+							</div>		
+							<div class="form-group">
+								<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+							<button type="submit" id="registrar" class="btn btn-default">Registrar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<!------------------------------------------------------------------Modal para el Login---------------->
+	<button class="btn btn-success" data-toggle="modal" data-target="#miLogin">Login</button>
+	<div class="modal " id="miLogin" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<buttom type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</buttom>	
+					<h4>Login</h4>
+					<form>
+						<div class="modal-body">	
+							<div class="form-group">
+								<input type="email" class="form-control" id="loginEmail" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="loginPassword" placeholder="Password">
+							</div>
+							<button type="submit" id="login" class="btn btn-default">Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--------------------------------------------------------------------------Barra de Opciones-------->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">
+				  <button class="glyphicon glyphicon-search" id="botonBusqueda" aria-hidden="true"></button>
+			 	</span>
+			  <input type="text" class="form-control" placeholder="Buscar" id="busqueda" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div class="col-xs-2 col-xs-offset-6">
+			<ul class="nav nav-tabs nav-left">
+			  <li role="presentation">
+<!-----------------------------------------------------Modal para Lista de Compras------>
+				<button class="btn btn-default" data-toggle="modal" data-target="#miCarrito"><img id="logoCarrito" src="http://www.seconect.com.br/img/lojas.png" class="img-responsive" alt=""></button>
+					<div class="modal " id="miCarrito" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<buttom type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</buttom>	
+									<h4>Carrito de compras</h4>
+									<form>
+										<div class="modal-body">	
+											<button type="submit" id="login" class="btn btn-default">Comprar</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-----------------------------------------------------Modal para dar la bienvenida------>
+	<button class="btn btn-success" data-toggle="modal" data-target="#bienvenida">Bienvenido</button>
+	<div class="modal " id="bienvenida" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<buttom type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</buttom>	
+					<h1>Bienvenido</h14>
+				</div>
+			</div>
+		</div>
+	</div>
+       
+<!-------------------------------------------------------------------------Productos---------------->
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="well container-fluid">
+		    		<div class="row">
+					  <div class="col-xs-6 col-sm-4">
+					    <div class="thumbnail">
+					      <img src="http://mco-s1-p.mlstatic.com/carro-rc-alto-rendimiento-a979-vortex-monster-truck-790121-MCO20696188862_052016-O.jpg" alt="..." class="img-responsive">
+					      <div class="caption">
+					        <h3 id="carroRC1-nombre"></h3>
+					        <p id="carroRC1-descripcion"></p>
+					        <p id="carroRC1-precio"></p>
+					        <p><a href="#" class="btn btn-success" role="button" id="btn-agregar-carroRC1">Agregar</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col-xs-6 col-sm-4">
+					    <div class="thumbnail">
+					      <img src="http://ecx.images-amazon.com/images/I/51rAe7iS6FL.jpg" alt="..." class="img-responsive">
+					      <div class="caption">
+					        <h3 id="carroRC2-nombre"></h3>
+					        <p id="carroRC2-descripcion"></p>
+					        <p id="carroRC2-precio"></p>
+					        <p><a href="#" class="btn btn-success" role="button" id="btn-agregar-carroRC2">Agregar</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col-xs-6 col-sm-4">
+					    <div class="thumbnail">
+					      <img src="http://mlm-s1-p.mlstatic.com/tb-carro-wltoys-l929-5ch-rc-high-speed-car-24g-21254-MLM20207085582_122014-O.jpg" alt="..." class="img-responsive">
+					      <div class="caption">
+					        <h3 id="carroRC3-nombre"></h3>
+					        <p id="carroRC3-descripcion"></p>
+					        <p id="carroRC3-precio"></p>
+					        <p><a href="#" class="btn btn-success" role="button" id="btn-agregar-carroRC3">Agregar</a>
+					    </div>
+					  </div>
+					</div>
+		    </div>
+	    </div>
+    </div>
 </body>
 </html>

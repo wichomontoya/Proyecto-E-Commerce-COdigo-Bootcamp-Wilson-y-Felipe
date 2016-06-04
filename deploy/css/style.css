@@ -1,1 +1,10 @@
-﻿
+﻿.container-fluid .icon-navbar{
+
+	height: 50px;
+}
+
+
+.container-fluid .img-responsive{
+
+	height: 20px;
+}

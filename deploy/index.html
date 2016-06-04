@@ -10,10 +10,10 @@
     <script src="js/code.js"></script>
 </head>
 
-<!--------------------------------------------------------------------------Header------------------>
+<!--Header-->
 <div class="jumbotron">
 	<img src="http://www.whiskdesign.com.au/wp-content/uploads/2013/02/RCracedays1.jpg" class="img-responsive" alt="" height="150px" >
-<!------------------------------------------------------------------Modal para el Registro-------->
+<!--Modal para el Registro-->
 	<button class="btn btn-default" data-toggle="modal" data-target="#miRegistro">Registrese</button>
 	<div class="modal " id="miRegistro" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-<!------------------------------------------------------------------Modal para el Login---------------->
+<!---Modal para el Login-->
 	<button class="btn btn-success" data-toggle="modal" data-target="#miLogin">Login</button>
 	<div class="modal " id="miLogin" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-<!--------------------------------------------------------------------------Barra de Opciones-------->
+<!--Barra de Opciones-->
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-4">
@@ -79,7 +79,7 @@
 		<div class="col-xs-2 col-xs-offset-6">
 			<ul class="nav nav-tabs nav-left">
 			  <li role="presentation">
-<!-----------------------------------------------------Modal para Lista de Compras------>
+<!---Modal para Lista de Compras-->
 				<button class="btn btn-default" data-toggle="modal" data-target="#miCarrito"><img id="logoCarrito" src="http://www.seconect.com.br/img/lojas.png" class="img-responsive" alt=""></button>
 					<div class="modal " id="miCarrito" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -102,20 +102,56 @@
 		</div>
 	</div>
 </div>
-<!-----------------------------------------------------Modal para dar la bienvenida------>
-	<button class="btn btn-success" data-toggle="modal" data-target="#bienvenida">Bienvenido</button>
+<!---Modal para dar la bienvenida-->
+	<button class="btn btn-success hidden" data-toggle="modal" data-target="#bienvenida"></button>
 	<div class="modal " id="bienvenida" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header">
-					<buttom type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</buttom>	
-					<h1>Bienvenido</h14>
+				<div class="modal-header">	
+					<h4>Bienvenido</h4>
+					<form>
+						<div class="modal-body">	
+							<button type="submit" id="login" class="btn btn-default" data-dismiss="modal">Continuar</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-       
-<!-------------------------------------------------------------------------Productos---------------->
+	<!-- -----------------------------------------Modal para error al login -->
+	<button class="btn btn-success hidden" data-toggle="modal" data-target="#porfavorRegistrese"></button>
+	<div class="modal " id="porfavorRegistrese" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">	
+					<h4>Porfavor Registrese</h4>
+					<form>
+						<div class="modal-body">	
+							<button type="submit" id="registrese" class="btn btn-default" data-dismiss="modal">Continuar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+ 	<!-- --------------------------------------Modal para No encontro producto -->
+	<button class="btn btn-success hidden" data-toggle="modal" data-target="#noSeEncuentraProducto"></button>
+	<div class="modal " id="noSeEncuentraProducto" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">	
+					<h4>Este producto no se encuentra en nuestra tienda</h4>
+					<form>
+						<div class="modal-body">	
+							<button type="submit" id="noSeEncuentraElProducto" class="btn btn-default" data-dismiss="modal">Continuar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!---Productos-->
     <div class="container-fluid">
 	    <div class="row">
 		    <div class="well container-fluid">

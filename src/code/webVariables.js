@@ -20,7 +20,8 @@ $(document).ready(function(){
     if(this.registros !== undefined){
       for (var i = this.registros.length - 1; i >= 0; i--) {
         if (this.registros[i].email === email && this.registros[i].password === password) {
-          $("#bienvenido").show();
+          console.log("bienvenido");
+          // alert("Bienvenido");
         }else {
           alert("Por favor registrese");
         }   
@@ -106,17 +107,25 @@ $(document).ready(function(){
   miInventario.agregarAMiBodega(carroRC3);
   console.log(miInventario.inventario);
   console.log(miListaDeCompras);
+
   $("#logoCarrito").click(function(){
   alert(miListaDeCompras.listaDeCompras[0].nombre);
-  $("#registrar").click(function(){
-    //var nuevoUsuario = new Persona ($(":nombre").val(),$(":apellido").val(),$(":email").val(),$("submit").val());
-    console.log("hola");
-    //var nuevoUsuario=new Persona(document.getElementById("inputNombre").value,document.getElementById("inputApellido").value,document.getElementById("inputEmail").value,document.getElementById("inputPassword").value);
-      
+  });
+
+  $("#registrar").click(function(event){
+    event.preventDefault();
+    var nuevoUsuario = new Persona ($("#inputNombre").val(),$("#inputApellido").val(),$("#inputEmail").val(),$("#inputPassword").val());
+       console.log(nuevoUsuario.firstName);
+       console.log(nuevoUsuario.lastName);
+  });
+  $("#login").click(function(event){
+    event.preventDefault();
+    var nuevoLogin = new Inscripcion($("#loginEmail").val(),$("#loginPassword").val());
+    nuevoLogin.login();
   });
 
 });
-});
+
 
 
 
